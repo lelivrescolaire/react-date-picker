@@ -355,32 +355,36 @@ var DateInput = function (_Component) {
           placeholder = this.placeholder;
 
 
-      return placeholder.split(divider).map(function (part) {
-        switch (part) {
-          case 'day':
-            return _this2.renderDay();
-          case 'month':
-            return _this2.renderMonth();
-          case 'year':
-            return _this2.renderYear();
-          default:
-            return null;
-        }
-      }).filter(Boolean).reduce(function (result, element, index, array) {
-        result.push(element);
+      return _react2.default.createElement(
+        'span',
+        null,
+        placeholder.split(divider).map(function (part) {
+          switch (part) {
+            case 'day':
+              return _this2.renderDay();
+            case 'month':
+              return _this2.renderMonth();
+            case 'year':
+              return _this2.renderYear();
+            default:
+              return null;
+          }
+        }).filter(Boolean).reduce(function (result, element, index, array) {
+          result.push(element);
 
-        if (index + 1 < array.length) {
-          result.push(
-          // eslint-disable-next-line react/no-array-index-key
-          _react2.default.createElement(
-            _Divider2.default,
-            { key: 'separator_' + index },
-            divider
-          ));
-        }
+          if (index + 1 < array.length) {
+            result.push(
+            // eslint-disable-next-line react/no-array-index-key
+            _react2.default.createElement(
+              _Divider2.default,
+              { key: 'separator_' + index },
+              divider
+            ));
+          }
 
-        return result;
-      }, []);
+          return result;
+        }, [])
+      );
     }
   }, {
     key: 'renderNativeInput',

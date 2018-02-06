@@ -58,28 +58,34 @@ var MonthInput = function (_PureComponent) {
 
       var hasLeadingZero = showLeadingZeros && value !== null && value < 10;
 
-      return [hasLeadingZero ? '0' : null, _react2.default.createElement('input', {
-        key: 'month',
-        className: (0, _mergeClassNames2.default)(className + '__input', className + '__month', hasLeadingZero && className + '__input--hasLeadingZero'),
-        name: 'month',
-        max: maxMonth,
-        min: minMonth,
-        onChange: onChange,
-        onKeyDown: onKeyDown,
-        placeholder: '--',
-        ref: function ref(_ref) {
-          if (!_ref) return;
+      return _react2.default.createElement(
+        'span',
+        null,
+        '[ (hasLeadingZero ? \'0\' : null),',
+        _react2.default.createElement('input', {
+          key: 'month',
+          className: (0, _mergeClassNames2.default)(className + '__input', className + '__month', hasLeadingZero && className + '__input--hasLeadingZero'),
+          name: 'month',
+          max: maxMonth,
+          min: minMonth,
+          onChange: onChange,
+          onKeyDown: onKeyDown,
+          placeholder: '--',
+          ref: function ref(_ref) {
+            if (!_ref) return;
 
-          (0, _utils.updateInputWidth)(_ref);
+            (0, _utils.updateInputWidth)(_ref);
 
-          if (itemRef) {
-            itemRef(_ref);
-          }
-        },
-        type: 'number',
-        required: required,
-        value: value !== null ? value : ''
-      })];
+            if (itemRef) {
+              itemRef(_ref);
+            }
+          },
+          type: 'number',
+          required: required,
+          value: value !== null ? value : ''
+        }),
+        ', ];'
+      );
     }
   }, {
     key: 'maxMonth',
