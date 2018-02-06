@@ -61,7 +61,7 @@ var DayInput = function (_PureComponent) {
       return _react2.default.createElement(
         'span',
         null,
-        '[ (hasLeadingZero ? \'0\' : null),',
+        hasLeadingZero ? '0' : null,
         _react2.default.createElement('input', {
           key: 'day',
           className: (0, _mergeClassNames2.default)(className + '__input', className + '__day', hasLeadingZero && className + '__input--hasLeadingZero'),
@@ -83,8 +83,7 @@ var DayInput = function (_PureComponent) {
           required: required,
           type: 'number',
           value: value !== null ? value : ''
-        }),
-        ', ]'
+        })
       );
     }
   }, {

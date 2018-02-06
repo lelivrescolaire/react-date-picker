@@ -47,35 +47,33 @@ export default class DayInput extends PureComponent {
 
     return (
       <span>
-        [
-          (hasLeadingZero ? '0' : null),
-          <input
-            key="day"
-            className={mergeClassNames(
-              `${className}__input`,
-              `${className}__day`,
-              hasLeadingZero && `${className}__input--hasLeadingZero`,
-            )}
-            name="day"
-            max={maxDay}
-            min={minDay}
-            onChange={onChange}
-            onKeyDown={onKeyDown}
-            placeholder="--"
-            ref={(ref) => {
-              if (!ref) return;
+        {(hasLeadingZero ? '0' : null)}
+        <input
+          key="day"
+          className={mergeClassNames(
+            `${className}__input`,
+            `${className}__day`,
+            hasLeadingZero && `${className}__input--hasLeadingZero`,
+          )}
+          name="day"
+          max={maxDay}
+          min={minDay}
+          onChange={onChange}
+          onKeyDown={onKeyDown}
+          placeholder="--"
+          ref={(ref) => {
+            if (!ref) return;
 
-              updateInputWidth(ref);
+            updateInputWidth(ref);
 
-              if (itemRef) {
-                itemRef(ref);
-              }
-            }}
-            required={required}
-            type="number"
-            value={value !== null ? value : ''}
-          />,
-        ]
+            if (itemRef) {
+              itemRef(ref);
+            }
+          }}
+          required={required}
+          type="number"
+          value={value !== null ? value : ''}
+        />
       </span>
     )
   }
