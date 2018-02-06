@@ -46,7 +46,7 @@ export default class DayInput extends PureComponent {
     const hasLeadingZero = showLeadingZeros && value !== null && value < 10;
 
     return (
-      <div>
+      <span>
         [
           (hasLeadingZero ? '0' : null),
           <input
@@ -76,7 +76,7 @@ export default class DayInput extends PureComponent {
             value={value !== null ? value : ''}
           />,
         ]
-      </div>
+      </span>
     )
   }
 }
