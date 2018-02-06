@@ -47,7 +47,7 @@ export default class DayInput extends PureComponent {
 
     return (
       <span>
-        {(hasLeadingZero ? '0' : null)}
+        {hasLeadingZero ? '0' : null}
         <input
           key="day"
           className={mergeClassNames(
