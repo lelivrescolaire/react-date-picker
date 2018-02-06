@@ -2,7 +2,7 @@
 
 A date picker for your React app.
 
-⚠️ **WARNING : This a temporary module to fix v6.7.0** ⚠️
+⚠️ **WARNING : This a temporary module to fix v6.8.1** ⚠️
 
 * Pick days, months, years, or even decades
 * Supports virtually any language
