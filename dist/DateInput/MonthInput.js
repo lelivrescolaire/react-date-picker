@@ -61,8 +61,7 @@ var MonthInput = function (_PureComponent) {
       return _react2.default.createElement(
         'span',
         null,
-        '[ (hasLeadingZero ? \'0\' : null),',
-        _react2.default.createElement('input', {
+        [hasLeadingZero ? '0' : null, _react2.default.createElement('input', {
           key: 'month',
           className: (0, _mergeClassNames2.default)(className + '__input', className + '__month', hasLeadingZero && className + '__input--hasLeadingZero'),
           name: 'month',
@@ -83,8 +82,7 @@ var MonthInput = function (_PureComponent) {
           type: 'number',
           required: required,
           value: value !== null ? value : ''
-        }),
-        ', ];'
+        })]
       );
     }
   }, {

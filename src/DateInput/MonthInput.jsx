@@ -30,7 +30,7 @@ export default class MonthInput extends PureComponent {
 
     return (
       <span>
-        [
+        {[
           (hasLeadingZero ? '0' : null),
           <input
             key="month"
@@ -58,7 +58,7 @@ export default class MonthInput extends PureComponent {
             required={required}
             value={value !== null ? value : ''}
           />,
-        ];
+        ]}
       </span>
     )
   }
