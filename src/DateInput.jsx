@@ -329,31 +329,35 @@ export default class DateInput extends Component {
     const { divider, placeholder } = this;
 
     return (
-      placeholder
-        .split(divider)
-        .map((part) => {
-          switch (part) {
-            case 'day': return this.renderDay();
-            case 'month': return this.renderMonth();
-            case 'year': return this.renderYear();
-            default: return null;
-          }
-        })
-        .filter(Boolean)
-        .reduce((result, element, index, array) => {
-          result.push(element);
+      <span>
+        {
+          placeholder
+            .split(divider)
+            .map((part) => {
+              switch (part) {
+                case 'day': return this.renderDay();
+                case 'month': return this.renderMonth();
+                case 'year': return this.renderYear();
+                default: return null;
+              }
+            })
+            .filter(Boolean)
+            .reduce((result, element, index, array) => {
+              result.push(element);
 
-          if (index + 1 < array.length) {
-            result.push(
-              // eslint-disable-next-line react/no-array-index-key
-              <Divider key={`separator_${index}`}>
-                {divider}
-              </Divider>,
-            );
-          }
+              if (index + 1 < array.length) {
+                result.push(
+                  // eslint-disable-next-line react/no-array-index-key
+                  <Divider key={`separator_${index}`}>
+                    {divider}
+                  </Divider>,
+                );
+              }
 
-          return result;
-        }, [])
+              return result;
+            }, [])
+        }
+      </span>
     );
   }
 
