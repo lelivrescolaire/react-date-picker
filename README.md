@@ -1,8 +1,10 @@
+![downloads](https://img.shields.io/npm/dt/react-date-picker.svg) ![build](https://img.shields.io/travis/wojtekmaj/react-date-picker.svg) ![dependencies](https://img.shields.io/david/wojtekmaj/react-date-picker.svg
+) ![dev dependencies](https://img.shields.io/david/dev/wojtekmaj/react-date-picker.svg
+) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
+
 # React-Date-Picker
 
 A date picker for your React app.
-
-⚠️ **WARNING : This a temporary module to fix v6.8.1** ⚠️
 
 * Pick days, months, years, or even decades
 * Supports virtually any language
